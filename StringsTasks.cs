@@ -1,18 +1,17 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 using System.IO;
-using System.Text.RegularExpressions;
 using System.Linq;
+using System.Reflection;
+using System.Text.RegularExpressions;
 
 namespace LabWork_Strings
 {
     public static class StringsTasks
     {
-        public static void Task1Variant6(string FilePath = @"D:\Text Files\EPAM_Strings\")
+        public static void Task1Variant6()
         {
-            string inputFilePath = FilePath + "input.io";
-            string outputFilePath = FilePath + "output.io";
+            string inputFilePath = Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), @"Text Files\input.io");
+            string outputFilePath = Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), @"Text Files\output.io");
 
             if (!File.Exists(inputFilePath))
             {
